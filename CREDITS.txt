@@ -1,0 +1,17 @@
+Cursorium bundles cursor themes from these open-source projects, converted from X11 Xcursor to Windows .cur/.ani format. All credit to the original authors.
+
+- https://github.com/ful1e5/Bibata_Cursor (GPL-3.0): 12 theme(s): Bibata Modern Classic, Bibata Modern Ice, Bibata Modern Amber, Bibata Original Classic, Bibata Original Ice, Bibata Original Amber, Bibata Modern Classic · Left-handed, Bibata Modern Ice · Left-handed, Bibata Modern Amber · Left-handed, Bibata Original Ice · Left-handed, Bibata Original Amber · Left-handed, Bibata Original Classic · Left-handed
+- https://github.com/ful1e5/BreezeX_Cursor (GPL-3.0): 3 theme(s): BreezeX Black, BreezeX Light, BreezeX Dark
+- https://github.com/rose-pine/cursor (GPL-3.0): 2 theme(s): Rosé Pine, Rosé Pine Dawn
+- https://github.com/ful1e5/banana-cursor (GPL-3.0): 1 theme(s): Banana
+- https://github.com/ful1e5/fuchsia-cursor (GPL-3.0): 1 theme(s): Fuchsia
+- https://github.com/ful1e5/Google_Cursor (GPL-3.0): 4 theme(s): GoogleDot Blue, GoogleDot Black, GoogleDot Red, GoogleDot White
+- https://github.com/ful1e5/XCursor-pro (GPL-3.0): 3 theme(s): XCursor Pro Dark, XCursor Pro Red, XCursor Pro Light
+- https://github.com/phisch/phinger-cursors (CC-BY-SA-4.0): 4 theme(s): Phinger Dark, Phinger Light, Phinger Dark · Left-handed, Phinger Light · Left-handed
+- https://github.com/catppuccin/cursors (GPL-2.0): 56 theme(s): Catppuccin Mocha Mauve, Catppuccin Mocha Dark, Catppuccin Latte Peach, Catppuccin Frappé Blue, Catppuccin Macchiato Green, Catppuccin Frappé Flamingo, Catppuccin Frappé Green, Catppuccin Frappé Lavender, Catppuccin Frappé Maroon, Catppuccin Frappé Mauve, Catppuccin Frappé Peach, Catppuccin Frappé Pink, Catppuccin Frappé Red, Catppuccin Frappé Rosewater, Catppuccin Frappé Sapphire, Catppuccin Frappé Sky, Catppuccin Frappé Teal, Catppuccin Frappé Yellow, Catppuccin Latte Blue, Catppuccin Latte Flamingo, Catppuccin Latte Green, Catppuccin Latte Lavender, Catppuccin Latte Maroon, Catppuccin Latte Mauve, Catppuccin Latte Pink, Catppuccin Latte Red, Catppuccin Latte Rosewater, Catppuccin Latte Sapphire, Catppuccin Latte Sky, Catppuccin Latte Teal, Catppuccin Latte Yellow, Catppuccin Macchiato Blue, Catppuccin Macchiato Flamingo, Catppuccin Macchiato Lavender, Catppuccin Macchiato Maroon, Catppuccin Macchiato Peach, Catppuccin Macchiato Pink, Catppuccin Macchiato Red, Catppuccin Macchiato Rosewater, Catppuccin Macchiato Sapphire, Catppuccin Macchiato Sky, Catppuccin Macchiato Teal, Catppuccin Macchiato Yellow, Catppuccin Mocha Blue, Catppuccin Mocha Flamingo, Catppuccin Mocha Green, Catppuccin Mocha Lavender, Catppuccin Mocha Maroon, Catppuccin Mocha Peach, Catppuccin Mocha Pink, Catppuccin Mocha Red, Catppuccin Mocha Rosewater, Catppuccin Mocha Sapphire, Catppuccin Mocha Sky, Catppuccin Mocha Teal, Catppuccin Mocha Yellow
+- https://github.com/dracula/gtk (GPL-3.0): 1 theme(s): Dracula
+- https://github.com/guillaumeboehm/Nordzy-cursors (GPL-3.0): 2 theme(s): Nordzy, Nordzy White
+- https://github.com/sainnhe/capitaine-cursors (LGPL-3.0): 8 theme(s): Capitaine, Capitaine White, Capitaine Gruvbox, Capitaine Palenight, Capitaine Nord, Capitaine Nord White, Capitaine Gruvbox White, Capitaine Palenight White
+- https://github.com/ful1e5/Bibata_Cursor_Rainbow (GPL-3.0): 2 theme(s): Bibata Rainbow Modern, Bibata Rainbow Original
+
+License texts that shipped with the downloads are in the licenses/ folder. Source for every theme is at the links above.

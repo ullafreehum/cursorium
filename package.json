@@ -1,0 +1,50 @@
+{
+  "name": "cursorium",
+  "productName": "Cursorium",
+  "version": "0.5.0",
+  "description": "A beautiful Windows cursor picker with 30 open-source cursor themes",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "author": "Dr. Sinan Doğan",
+  "build": {
+    "appId": "com.drsinandogan.cursorium",
+    "productName": "Cursorium",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "style.css",
+      "apply.ps1",
+      "icon.png",
+      "catalog.json",
+      "CREDITS.txt",
+      "licenses/**",
+      "themes/**"
+    ],
+    "asarUnpack": [
+      "apply.ps1"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "Cursorium-${version}-portable.exe"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "compression": "maximum"
+  }
+}

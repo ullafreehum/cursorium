@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>Cursorium</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow" id="glow"></div>
+
+<header class="titlebar">
+  <div class="brand"><span class="logo"></span>Cursorium <em id="tagline">open-source cursor themes</em></div>
+  <div class="now" id="now" title="Currently applied scheme">—</div>
+</header>
+
+<div class="shell">
+  <aside class="side">
+    <label class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input id="q" placeholder="Search themes…   /" spellcheck="false">
+    </label>
+
+    <div class="sec">Collection</div>
+    <select id="family" class="fam"></select>
+
+    <div class="sec">Browse</div>
+    <div class="chips" id="chips"></div>
+
+    <div class="sec">Sort</div>
+    <div class="seg" id="sort">
+      <button data-v="curated" class="on">Curated</button><button data-v="az">A–Z</button><button data-v="fav">★ first</button><button data-v="shuffle">Shuffle</button>
+    </div>
+
+    <div class="sec">Pointer size <span id="sizeVal">48</span></div>
+    <input type="range" id="size" min="32" max="160" step="16" value="48">
+    <p class="hint">Applied with the theme. Same as Windows' size slider.</p>
+
+    <div class="sec">Mix &amp; match</div>
+    <button class="ghost wide" id="mixToggle">Open mixer</button>
+
+    <div class="sec">Safety net</div>
+    <button class="ghost wide" id="restorePrev">↶ Restore my previous cursors</button>
+    <button class="ghost wide" id="restoreDef">Windows default</button>
+
+    <div class="sec">Recently applied</div>
+    <div id="recent" class="recent"></div>
+
+    <div class="keys">
+      <b>Keys</b> ←→↑↓ move · Enter open · A apply · F favourite · R surprise · M mixer · / search · Esc close
+    </div>
+  </aside>
+
+  <main id="main">
+    <div class="toolbar">
+      <h1 id="heading">All themes</h1>
+      <span id="count" class="count"></span>
+      <div class="spacer"></div>
+      <div class="seg small" id="bg" title="Card backdrop">
+        <button data-v="auto" class="on">Auto</button><button data-v="dark">Dark</button><button data-v="light">Light</button><button data-v="photo">Vivid</button>
+      </div>
+      <button class="accent" id="surprise">✦ Surprise me</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+
+<!-- detail drawer -->
+<section class="drawer" id="drawer" aria-hidden="true">
+  <div class="dhead">
+    <div>
+      <div class="dtitle" id="dName"></div>
+      <div class="dmeta" id="dMeta"></div>
+    </div>
+    <div class="spacer"></div>
+    <button class="icon" id="dFav" title="Favourite (F)">☆</button>
+    <button class="icon" id="dClose" title="Close (Esc)">✕</button>
+  </div>
+  <p class="dblurb" id="dBlurb"></p>
+
+  <div class="dactions">
+    <button class="accent big" id="dApply">Apply to Windows</button>
+    <button class="ghost" id="dExport" title="Make a right-click → Install folder on your Desktop">Export installer</button>
+    <button class="ghost" id="dSource">Source ↗</button>
+  </div>
+
+  <div class="sec">Test drive <span class="hint">: move over each element, your pointer becomes the theme</span></div>
+  <div class="play" id="play">
+    <div class="seg small pbg" id="pbg"><button data-v="dark" class="on">Dark</button><button data-v="light">Light</button><button data-v="grad">Gradient</button><button data-v="check">Checker</button></div>
+    <div class="row">
+      <input class="pinput" data-role="IBeam" placeholder="Type here (text select)">
+      <a class="plink" data-role="Hand">A link →</a>
+      <button class="pdis" data-role="No" disabled>Disabled</button>
+      <span class="phelp" data-role="Help">?</span>
+    </div>
+    <div class="row">
+      <canvas class="pcanvas" id="pdraw" data-role="NWPen" width="220" height="110"></canvas>
+      <canvas class="pcanvas" id="pcross" data-role="Crosshair" width="140" height="110"></canvas>
+      <div class="pbusy" data-role="Wait"><img id="pBusyImg" alt="">Busy zone</div>
+      <div class="pbusy" data-role="AppStarting"><img id="pWorkImg" alt="">Working</div>
+    </div>
+    <div class="row">
+      <div class="presize" data-role="SizeNWSE"><span>resize ↘</span></div>
+      <div class="pbar ns" data-role="SizeNS"></div>
+      <div class="pbar we" data-role="SizeWE"></div>
+      <div class="pmove" data-role="SizeAll">drag me</div>
+    </div>
+  </div>
+
+  <div class="sec">All 17 pointers <span class="hint">: hover to feel, click ⊕ to add to the mixer</span></div>
+  <div class="roles" id="roles"></div>
+</section>
+
+<!-- mixer bar -->
+<section class="mixer" id="mixer" aria-hidden="true">
+  <div class="mixhead">
+    <b>Mixer</b><span class="hint">⊕ pointers from any theme · empty slots use the base</span>
+    <div class="spacer"></div>
+    <label class="hint">Base <select id="mixBase"></select></label>
+    <input id="mixName" value="My Mix" spellcheck="false">
+    <button class="ghost" id="mixClear">Clear</button>
+    <button class="ghost" id="mixExport">Export</button>
+    <button class="accent" id="mixApply">Apply mix</button>
+    <button class="icon" id="mixClose">✕</button>
+  </div>
+  <div class="slots" id="slots"></div>
+</section>
+
+<div class="toast" id="toast"></div>
+<script src="renderer.js"></script>
+</body>
+</html>
