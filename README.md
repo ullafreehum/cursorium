@@ -45,4 +45,3 @@ npm run dist                   # build the portable exe
 
 Cursorium's own code is MIT-licensed (see `LICENSE`). **The cursor themes are not mine.** They're the work of their authors, redistributed in converted form under their original licences (GPL-2.0/3.0, LGPL-3.0, CC-BY-SA-4.0). See [`CREDITS.txt`](CREDITS.txt) for every project and licence, and `licenses/` for the licence texts. Full thanks to [ful1e5](https://github.com/ful1e5), [Catppuccin](https://github.com/catppuccin/cursors), [phisch](https://github.com/phisch/phinger-cursors), [sainnhe](https://github.com/sainnhe/capitaine-cursors), [Rosé Pine](https://github.com/rose-pine/cursor), [guillaumeboehm](https://github.com/guillaumeboehm/Nordzy-cursors) and [Dracula](https://github.com/dracula/gtk).
 
-Made by Dr. Sinan Doğan.
